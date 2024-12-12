@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trip Joy</title>
+
+    <!-- fav icon -->
+    <link href="./assets/img/fav/logo.png" rel="icon" type="favicon/png>" sizes="16x16" />
+
+    <!-- bootstrap css1 js1 -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap-5.2.3-dist/css/bootstrap.min.css" type="text/css" />
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery ui css1 js1 -->
+    <link rel="stylesheet" href="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.css" type="text/css" />
+
+    <!-- lightbox2 css1 js1 -->
+    <link rel="stylesheet" href="./assets/libs/lightbox2-dev/dist/css/lightbox.min.css" type="text/css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <!-- Start Header Section -->
+    <header class="header mx-5 px-5">
+      <!-- Background video -->
+      <div class="banners">
+        <video autoplay loop muted><source src="./assets/img/banner/banner1.mp4" /></video>
+      </div>
+      <!-- Start Navbar Section -->
+      <nav class="navbar navbar-expand-lg bg-light px-5 fixed-top">
+        <a href="javascript:void(0);" class="navbar-brand fw-bold">
+          <img src="./assets/img/fav/logo.png" width="40" alt="siteloge" />
+          <span class="h2">Trip Joy</span>
+        </a>
+        <button type="button" class="navbar-toggler navbarbuttons" data-bs-toggle="collapse" data-bs-target="#nav">
+          <div class="lines1"></div>
+          <div class="lines2"></div>
+          <div class="lines3"></div>
+        </button>
+        <div id="nav" class="navbar-collapse collapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a href="javascript:void(0);" class="nav-link currents">Home</a></li>
+            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Destinations</a></li>
+            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact us</a></li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row gap-3">
+            <select id="currencytype" class="form-select">
+              <option value="1" selected>MMK</option>
+              <option value="2">US ($)</option>
+            </select>
+            <button type="button" class="btn w-100 btn-primary text-nowrap">Sign Up</button>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar Section -->
+
+      <!-- Start Hero Section -->
+
+      <div class="hero">
+        <h1 class="text-light">Plan Your Perfect <br />Gateway Today</h1>
+        <p class="text-light">Whether you're seeking adventure or relaxation, TripJoy has the perfect travel deals for you. Start planning now.</p>
+        <div class="row">
+          <div class="col-lg-6 bg-light rounded-3 px-0">
+            <ul class="nav nav-justified">
+              <li class="nav-item">
+                <button class="tablinks" data-gettab="airplaneticket"><i class="fa-solid fa-plane-departure"></i> Airplan Ticket</button>
+              </li>
+              <li class="nav-item">
+                <button class="tablinks" data-gettab="hotel"><i class="fa-solid fa-hotel"></i> Hotel</button>
+              </li>
+              <li class="nav-item">
+                <button class="tablinks" data-gettab="tour"><i class="fa-solid fa-torii-gate"></i> Tour</button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-12 bg-light rounded-3 tab-contents">
+            <div id="airplaneticket" class="row tabpannels">
+              <div class="col-lg-6 py-3">
+                <div class="d-flex justify-content-between">
+                  <div class="input-check">
+                    <input type="radio" name="way" id="oneway" class="form-check-input" />
+                    <label class="form-check-label" for="oneway">One Way</label>
+                  </div>
+                  <div class="input-check">
+                    <input type="radio" name="way" id="roundtrip" class="form-check-input" checked />
+                    <label class="form-check-label" for="roundtrip">Round Trip</label>
+                  </div>
+                  <div class="input-check">
+                    <input type="radio" name="way" id="multicity" class="form-check-input" />
+                    <label class="form-check-label" for="multicity">Multi City</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <form action="" method="" class="row pt-3">
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="wherefrom" class="form-control" placeholder="from" value="Jakata" />
+                    <label for="wherefrom" class="ms-2">From</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="whereto" class="form-control" placeholder="from" value="New York" />
+                    <label for="whereto" class="ms-2">To</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="departdate" class="form-control" placeholder="from" value="2024-12-02" />
+                    <label for="departdate" class="ms-2">Depart</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="arrivedate" class="form-control" placeholder="from" value="2024-12-03" />
+                    <label for="arrivedate" class="ms-2">Arrive</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="number" id="passenger" class="form-control" placeholder="from" value="1" />
+                    <label for="passenger" class="ms-2">Passenger</label>
+                  </div>
+                  <div class="col-lg-2 mb-3">
+                    <button type="submit" class="btn btn-primary h-100 w-100">Search Ticket</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="hotel" class="row tabpannels">
+              <div class="col-md-12">
+                <form action="" method="" class="row pt-3">
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="wherefrom" class="form-control" placeholder="from" value="Jakata" />
+                    <label for="wherefrom" class="ms-2">From</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="whereto" class="form-control" placeholder="from" value="New York" />
+                    <label for="whereto" class="ms-2">To</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="departdate" class="form-control" placeholder="from" value="2024-12-02" />
+                    <label for="departdate" class="ms-2">Depart</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="arrivedate" class="form-control" placeholder="from" value="2024-12-03" />
+                    <label for="arrivedate" class="ms-2">Arrive</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="number" id="passenger" class="form-control" placeholder="from" value="1" />
+                    <label for="passenger" class="ms-2">Passenger</label>
+                  </div>
+                  <div class="col-lg-2 mb-3">
+                    <button type="submit" class="btn btn-primary h-100 w-100">Search Ticket</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="tour" class="row tabpannels">
+              <div class="col-md-12">
+                <form action="" method="" class="row pt-3">
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="wherefrom" class="form-control" placeholder="from" value="Jakata" />
+                    <label for="wherefrom" class="ms-2">From</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="text" id="whereto" class="form-control" placeholder="from" value="New York" />
+                    <label for="whereto" class="ms-2">To</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="departdate" class="form-control" placeholder="from" value="2024-12-02" />
+                    <label for="departdate" class="ms-2">Depart</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="date" id="arrivedate" class="form-control" placeholder="from" value="2024-12-03" />
+                    <label for="arrivedate" class="ms-2">Arrive</label>
+                  </div>
+                  <div class="col-lg-2 form-floating mb-3">
+                    <input type="number" id="passenger" class="form-control" placeholder="from" value="1" />
+                    <label for="passenger" class="ms-2">Passenger</label>
+                  </div>
+                  <div class="col-lg-2 mb-3">
+                    <button type="submit" class="btn btn-primary h-100 w-100">Search Ticket</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Hero Section -->
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Start Just For You -->
+    <!-- End Just For You -->
+
+    <!-- bootsrtap css1 js1 -->
+    <script src="./assets/libs/bootstrap-5.2.3-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jquery js1 -->
+    <script src="./assets/libs/jquery/jquery-3.7.1.min.js"></script>
+    <!-- jquery ui css1 js1 -->
+    <script src="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+
+    <!-- lightbox2 css1 js1 -->
+    <script src="./assets/libs/lightbox2-dev/dist/js/lightbox.min.js"></script>
+
+    <!-- custom js -->
+    <script src="./js/app.js" type="text/javascript"></script>
+  </body>
+</html>
